@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Billing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .summary {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .summary h3 {
+            margin-top: 0;
+        }
+        .summary p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Car Rental Billing</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="renterName">Renter's Name:</label>
+                <input type="text" id="renterName" name="renterName" required>
+            </div>
+            <div class="form-group">
+                <label for="renterEmail">Email:</label>
+                <input type="email" id="renterEmail" name="renterEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="rentalDate">Rental Date:</label>
+                <input type="date" id="rentalDate" name="rentalDate" required>
+            </div>
+            <div class="form-group">
+                <label for="returnDate">Return Date:</label>
+                <input type="date" id="returnDate" name="returnDate" required>
+            </div>
+            <div class="form-group">
+                <label for="carType">Car Type:</label>
+                <select id="carType" name="carType" required>
+                    <option value="">Select a car type</option>
+                    <option value="economy">Economy</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="luxury">Luxury</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dailyRate">Daily Rate ($):</label>
+                <input type="number" id="dailyRate" name="dailyRate" required>
+            </div>
+            <div class="form-group">
+                <label for="totalDays">Total Rental Days:</label>
+                <input type="number" id="totalDays" name="totalDays" required>
+            </div>
+            <div class="form-group">
+                <label for="additionalFees">Additional Fees ($):</label>
+                <input type="number" id="additionalFees" name="additionalFees">
+            </div>
+            <div class="form-group">
+                <label for="taxRate">Tax Rate (%):</label>
+                <input type="number" id="taxRate" name="taxRate" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate Total">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
